@@ -1,6 +1,5 @@
 package ch.werter;
 
-import java.awt.*;
 import java.util.Properties;
 
 public class Configuration {
@@ -22,16 +21,22 @@ public class Configuration {
         return properties;
     }
 
-    public static enum Value {
+    public enum Value {
 
-        BACKGROUND(UniversalSpeedRun.get().getProperties().getProperty("background")),
-        KEYCODE(UniversalSpeedRun.get().getProperties().getProperty("keyCode")),
-        PATH(UniversalSpeedRun.get().getProperties().getProperty("path"));
+        BACKGROUND("background",UniversalSpeedRun.get().getProperties().getProperty("background")),
+        KEYCODE("keyCode",UniversalSpeedRun.get().getProperties().getProperty("keyCode")),
+        PATH("path",UniversalSpeedRun.get().getProperties().getProperty("path"));
 
         private String value;
+        private String key;
 
-        Value(String value) {
+        Value(String value, String key) {
             this.value = value;
+            this.key = key;
+        }
+
+        public String getKey() {
+            return key;
         }
 
         public String getValue() {
