@@ -5,7 +5,6 @@ import ch.werter.api.Timer;
 import ch.werter.api.event.Event;
 import ch.werter.api.event.ToggleTimerEvent;
 import ch.werter.gui.Main;
-import ch.werter.test.Test;
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
 import org.jnativehook.keyboard.NativeKeyEvent;
@@ -13,11 +12,7 @@ import org.jnativehook.keyboard.NativeKeyListener;
 
 import java.awt.*;
 import java.io.*;
-import java.lang.reflect.Constructor;
-import java.util.Enumeration;
 import java.util.Properties;
-import java.util.jar.JarEntry;
-import java.util.jar.JarFile;
 import java.util.logging.LogManager;
 
 public class UniversalSpeedRun {
